@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}decoding ink</title>
+  <meta name="description" content="{{ description | default('A portfolio by Olivia Buzek') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    {% for link in social %}
+    <a href="{{ link.url }}" class="sidebar-link" target="_blank" rel="noopener">
+      {% include "icons/" + link.icon + ".svg" %}
+      <span class="sidebar-label">{{ link.name }}</span>
+    </a>
+    {% endfor %}
+  </aside>
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="header-content">
+        <div class="site-branding">
+          <a href="/" class="site-title">decoding ink</a>
+          <span class="site-subtitle">a portfolio by Olivia Buzek</span>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+            <li><a href="/resume/" {% if page.url == "/resume/" %}aria-current="page"{% endif %}>Resume</a></li>
+            <li><a href="/coding/" {% if page.url == "/coding/" %}aria-current="page"{% endif %}>Coding</a></li>
+            <li><a href="/writing/" {% if page.url == "/writing/" %}aria-current="page"{% endif %}>Writing</a></li>
+            <li><a href="/speaking/" {% if page.url == "/speaking/" %}aria-current="page"{% endif %}>Speaking</a></li>
+            <li><a href="/blog/" {% if page.url | startsWith("/blog/") %}aria-current="page"{% endif %}>Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; {{ page.date.getFullYear() }} Olivia Buzek. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

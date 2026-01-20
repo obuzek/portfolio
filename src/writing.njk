@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Writing
+---
+
+<div class="page-header">
+  <h1>Writing</h1>
+  <p class="subtitle">Published articles and technical writing</p>
+</div>
+
+<div class="items-list">
+  {% for article in writing %}
+  <article class="item-card">
+    <h3><a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.title }}</a></h3>
+    <p class="item-meta">
+      {% if article.publication %}{{ article.publication }}{% endif %}
+      {% if article.publication and article.date %} &middot; {% endif %}
+      {% if article.date %}{{ article.date }}{% endif %}
+    </p>
+    <p class="item-description">{{ article.description }}</p>
+  </article>
+  {% else %}
+  <p>No writing listed yet. Check back soon!</p>
+  {% endfor %}
+</div>

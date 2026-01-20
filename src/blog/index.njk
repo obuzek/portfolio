@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Blog
+permalink: /blog/
+tags: []
+---
+
+<div class="page-header">
+  <h1>Blog</h1>
+  <p class="subtitle">Thoughts on software, technology, and more</p>
+</div>
+
+<div class="blog-list">
+  {% for post in collections.blog | reverse %}
+  <article class="blog-post-preview">
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="post-meta">{{ post.date | dateFormat }}</p>
+    {% if post.data.excerpt %}
+    <p class="excerpt">{{ post.data.excerpt }}</p>
+    {% endif %}
+  </article>
+  {% else %}
+  <p>No blog posts yet. Check back soon!</p>
+  {% endfor %}
+</div>

@@ -1,0 +1,26 @@
+# Writing Portfolio
+# Add new publications by creating entries in this file
+# Format:
+#   - title: Article Title
+#     url: https://example.com/article
+#     publication: Publication Name
+#     description: Short description of the article
+#     date: 2024-01-15
+
+- title: Understanding Modern JavaScript Build Tools
+  url: https://example.com/js-build-tools
+  publication: Dev.to
+  description: A comprehensive guide to modern JavaScript build tools including Vite, esbuild, and webpack.
+  date: 2024-05-20
+
+- title: The Art of Writing Clean Code
+  url: https://example.com/clean-code
+  publication: Medium
+  description: Practical tips and patterns for writing maintainable, readable code that stands the test of time.
+  date: 2024-02-14
+
+- title: Getting Started with TypeScript in 2024
+  url: https://example.com/typescript-2024
+  publication: Smashing Magazine
+  description: An updated beginner's guide to TypeScript covering the latest features and best practices.
+  date: 2024-01-10

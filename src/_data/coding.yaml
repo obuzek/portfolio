@@ -1,0 +1,37 @@
+# Coding Projects
+# Add new projects by creating entries in this file
+# Format:
+#   - title: Project Name
+#     url: https://github.com/username/repo
+#     description: Short description of the project
+#     tags:
+#       - tag1
+#       - tag2
+#     date: 2024-01-15
+
+- title: Example Project One
+  url: https://github.com/oliviabuzek/example-project-one
+  description: A sample project demonstrating modern web development practices with React and TypeScript.
+  tags:
+    - React
+    - TypeScript
+    - Open Source
+  date: 2024-06-15
+
+- title: CLI Tool for Developers
+  url: https://github.com/oliviabuzek/cli-tool
+  description: Command-line utility that streamlines common development workflows and automates repetitive tasks.
+  tags:
+    - Go
+    - CLI
+    - Developer Tools
+  date: 2024-03-20
+
+- title: API Framework
+  url: https://github.com/oliviabuzek/api-framework
+  description: Lightweight REST API framework with built-in validation, authentication, and documentation generation.
+  tags:
+    - Python
+    - API
+    - Framework
+  date: 2023-11-10

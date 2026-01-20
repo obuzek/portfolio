@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<section class="home-intro">
+  <h1>Olivia Buzek</h1>
+  <p class="tagline">AI engineer, writer, and speaker</p>
+
+  <p>Welcome to decoding ink - a space where I share my thoughts on software development,
+  document my coding projects, and compile my public speaking and writing work.</p>
+</section>
+
+<section class="home-section">
+  <h2>Recent Blog Posts</h2>
+  <div class="blog-list">
+    {% for post in collections.blog | reverse | limit(3) %}
+    <article class="blog-post-preview">
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p class="post-meta">{{ post.date | dateFormat }}</p>
+      {% if post.data.excerpt %}
+      <p class="excerpt">{{ post.data.excerpt }}</p>
+      {% endif %}
+    </article>
+    {% else %}
+    <p>No blog posts yet. Check back soon!</p>
+    {% endfor %}
+  </div>
+</section>

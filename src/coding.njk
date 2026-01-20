@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Coding
+---
+
+<div class="page-header">
+  <h1>Coding Projects</h1>
+  <p class="subtitle">Open source work and personal projects</p>
+</div>
+
+<div class="items-list">
+  {% for project in coding %}
+  <article class="item-card">
+    <h3><a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a></h3>
+    {% if project.date %}
+    <p class="item-meta">{{ project.date }}</p>
+    {% endif %}
+    <p class="item-description">{{ project.description }}</p>
+    {% if project.tags %}
+    <div class="item-tags">
+      {% for tag in project.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+  {% else %}
+  <p>No coding projects listed yet. Check back soon!</p>
+  {% endfor %}
+</div>

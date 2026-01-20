@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <h1>{{ title }}</h1>
+    <p class="post-meta">{{ date | dateFormat }}</p>
+  </header>
+
+  <div class="blog-post-content">
+    {{ content | safe }}
+  </div>
+
+  {% set previousPost = collections.blog | getPreviousPost(page) %}
+  {% set nextPost = collections.blog | getNextPost(page) %}
+
+  {% if previousPost or nextPost %}
+  <nav class="post-navigation">
+    {% if previousPost %}
+    <a href="{{ previousPost.url }}" class="post-nav-link prev">
+      <span class="nav-label">&larr; Previous</span>
+      <span class="nav-title">{{ previousPost.data.title }}</span>
+    </a>
+    {% endif %}
+
+    {% if nextPost %}
+    <a href="{{ nextPost.url }}" class="post-nav-link next">
+      <span class="nav-label">Next &rarr;</span>
+      <span class="nav-title">{{ nextPost.data.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</article>

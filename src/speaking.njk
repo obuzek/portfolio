@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+title: Speaking
+---
+
+<div class="page-header">
+  <h1>Speaking</h1>
+  <p class="subtitle">Conference talks and presentations</p>
+</div>
+
+<div class="items-list">
+  {% for talk in speaking %}
+  <article class="item-card">
+    <h3>
+      {% if talk.url %}
+      <a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
+      {% else %}
+      {{ talk.title }}
+      {% endif %}
+    </h3>
+    <p class="item-meta">
+      {{ talk.event }}
+      {% if talk.location %} &middot; {{ talk.location }}{% endif %}
+      {% if talk.date %} &middot; {{ talk.date }}{% endif %}
+    </p>
+    <p class="item-description">{{ talk.description }}</p>
+    {% if talk.url %}
+    <p><a href="{{ talk.url }}" target="_blank" rel="noopener">Watch recording &rarr;</a></p>
+    {% endif %}
+  </article>
+  {% else %}
+  <p>No speaking engagements listed yet. Check back soon!</p>
+  {% endfor %}
+</div>
