@@ -28,9 +28,14 @@
           <span class="site-subtitle">a portfolio by Olivia Buzek</span>
         </div>
         <nav class="main-nav">
-          <ul>
+          <ul class="nav-always">
             <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
             <li><a href="/resume/" {% if page.url == "/resume/" %}aria-current="page"{% endif %}>Resume</a></li>
+          </ul>
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger"></span>
+          </button>
+          <ul class="nav-collapsible">
             <li><a href="/coding/" {% if page.url == "/coding/" %}aria-current="page"{% endif %}>Coding</a></li>
             <li><a href="/writing/" {% if page.url == "/writing/" %}aria-current="page"{% endif %}>Writing</a></li>
             <li><a href="/speaking/" {% if page.url == "/speaking/" %}aria-current="page"{% endif %}>Speaking</a></li>
@@ -50,5 +55,14 @@
       </div>
     </footer>
   </div>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-collapsible');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
