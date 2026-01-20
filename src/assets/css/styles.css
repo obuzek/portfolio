@@ -599,9 +599,9 @@ a:hover {
 }
 
 .qr-code {
-  border-radius: 8px;
-  background: white;
-  padding: var(--spacing-sm);
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
 }
 
 .qr-label {

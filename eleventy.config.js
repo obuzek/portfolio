@@ -1,6 +1,17 @@
 const yaml = require('js-yaml');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+// Generate QR code once at startup (outside the config function)
+const qrPath = path.join(__dirname, 'src/assets/images/qr-code.svg');
+if (!fs.existsSync(qrPath)) {
+  const scriptPath = path.join(__dirname, 'scripts/generate-qr.js');
+  execSync(`node "${scriptPath}"`, { stdio: 'inherit' });
+}
 
 module.exports = function(eleventyConfig) {
+
   // Add YAML support for data files
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
 
