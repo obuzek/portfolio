@@ -3,27 +3,85 @@ layout: layouts/base.njk
 title: Home
 ---
 
-<section class="home-intro">
-  <h1>Olivia Buzek</h1>
-  <p class="tagline">AI engineer, writer, and speaker</p>
+<div class="home-split">
+  <aside class="home-left">
+    <div class="home-left-content">
+      <img src="/assets/images/headshot-placeholder.svg" alt="Olivia Buzek" class="headshot">
+      <h1>Olivia Buzek</h1>
+      <p class="tagline">AI engineer, writer, and speaker</p>
+    </div>
+  </aside>
 
-  <p>Welcome to decoding ink - a space where I share my thoughts on software development,
-  document my coding projects, and compile my public speaking and writing work.</p>
-</section>
+  <div class="home-right">
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>Welcome to decoding ink - a space where I share my thoughts on software development,
+      document my coding projects, and compile my public speaking and writing work.</p>
+      <p>I'm an AI engineer passionate about building tools that help developers work more effectively.
+      When I'm not coding, you'll find me speaking at conferences, writing about technology,
+      or contributing to open source projects.</p>
+    </section>
 
-<section class="home-section">
-  <h2>Recent Blog Posts</h2>
-  <div class="blog-list">
-    {% for post in collections.blog | reverse | limit(3) %}
-    <article class="blog-post-preview">
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p class="post-meta">{{ post.date | dateFormat }}</p>
-      {% if post.data.excerpt %}
-      <p class="excerpt">{{ post.data.excerpt }}</p>
-      {% endif %}
-    </article>
-    {% else %}
-    <p>No blog posts yet. Check back soon!</p>
-    {% endfor %}
+    <section class="activity-section">
+      <h2>Activity</h2>
+      <ul class="activity-feed">
+        {# Collect all items from all sources with their type and date #}
+        {% set allItems = [] %}
+
+        {# Add coding projects from GitHub pinned repos #}
+        {% for item in github.repos %}
+          {% set allItems = (allItems.push({
+            type: 'coding',
+            title: item.title,
+            url: item.url,
+            date: null,
+            meta: item.language if item.language else ''
+          }), allItems) %}
+        {% endfor %}
+
+        {# Add writing pieces #}
+        {% for item in writing %}
+          {% set allItems = (allItems.push({
+            type: 'writing',
+            title: item.title,
+            url: item.url,
+            date: item.date,
+            meta: item.publication
+          }), allItems) %}
+        {% endfor %}
+
+        {# Add speaking engagements #}
+        {% for item in speaking %}
+          {% set allItems = (allItems.push({
+            type: 'speaking',
+            title: item.title,
+            url: item.url if item.url else '/speaking/',
+            date: item.date,
+            meta: item.event
+          }), allItems) %}
+        {% endfor %}
+
+        {# Add blog posts #}
+        {% for post in collections.blog %}
+          {% set allItems = (allItems.push({
+            type: 'blog',
+            title: post.data.title,
+            url: post.url,
+            date: post.date,
+            meta: 'Blog'
+          }), allItems) %}
+        {% endfor %}
+
+        {# Sort by date descending and display #}
+        {% for item in allItems | sort(attribute='date') | reverse %}
+        <li class="activity-item">
+          <span class="activity-type activity-type--{{ item.type }}">{{ item.type }}</span>
+          <a href="{{ item.url }}">{{ item.title }}</a>
+          {% if item.meta %}<span class="activity-meta">{{ item.meta }}</span>{% endif %}
+          {% if item.date %}<span class="activity-date">{{ item.date | dateFormat }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
   </div>
-</section>
+</div>

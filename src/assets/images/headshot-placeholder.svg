@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#1a1329" rx="100"/>
+  <circle cx="100" cy="75" r="40" fill="#3d2e5c"/>
+  <ellipse cx="100" cy="160" rx="55" ry="45" fill="#3d2e5c"/>
+  <text x="100" y="185" text-anchor="middle" fill="#818cf8" font-family="Inter, sans-serif" font-size="10">placeholder</text>
+</svg>

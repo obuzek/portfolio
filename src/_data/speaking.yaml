@@ -1,36 +1,60 @@
 # Speaking Engagements
-# Add new talks by creating entries in this file
-# Format:
-#   - title: Talk Title
-#     event: Conference or Event Name
-#     location: City, Country
-#     date: 2024-01-15
-#     url: https://example.com/slides (optional - link to slides, video, etc.)
-#     description: Short description of the talk
 
-- title: Building Scalable Web Applications
-  event: TechConf 2024
-  location: San Francisco, CA
-  date: 2024-09-15
-  url: https://youtube.com/watch?v=example1
-  description: Deep dive into architectural patterns and best practices for building web applications that scale.
+# Conference Talks
+- title: "Humans In the Loop: Collaborating in the Age of AI"
+  event: InnerSource Summit 2025
+  date: 2024-12-01
+  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  description: Keynote on human-AI collaboration and what it means for inner source communities.
 
-- title: The Future of TypeScript
-  event: JavaScript Summit
+- title: "Building Your (Local) LLM Second Brain"
+  event: Open Source Summit North America
+  location: Denver, CO
+  date: 2025-07-01
+  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  description: How to build a local LLM-powered productivity system using open source tools.
+
+- title: "Building Your (Local) LLM Second Brain"
+  event: DevOpsDays Austin
   location: Austin, TX
-  date: 2024-06-08
-  url: https://youtube.com/watch?v=example2
-  description: Exploring upcoming TypeScript features and how they'll change the way we write JavaScript applications.
+  date: 2025-05-01
+  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  description: How to build a local LLM-powered productivity system using open source tools.
 
-- title: DevOps for Developers
-  event: DevOpsDays Chicago
-  location: Chicago, IL
-  date: 2024-03-22
-  description: Practical introduction to DevOps principles and tools for software developers looking to level up their deployment skills.
-
-- title: Open Source Sustainability
-  event: FOSDEM
+- title: "Building Your (Local) LLM Second Brain"
+  event: FOSDEM 2025
   location: Brussels, Belgium
-  date: 2024-02-03
-  url: https://youtube.com/watch?v=example3
-  description: Panel discussion on maintaining healthy open source projects and building sustainable contributor communities.
+  date: 2025-02-02
+  url: https://archive.fosdem.org/2025/schedule/event/fosdem-2025-6542-building-your-local-llm-second-brain/
+  description: How to build a local LLM-powered productivity system using open source tools.
+
+- title: "Granite and Docling Workshops"
+  event: Women in Data Science San Jose
+  location: San Jose, CA
+  date: 2025-10-24
+  description: Hands-on workshops on IBM Granite models and Docling document processing.
+
+- title: "Birth of InnerSource at IBM"
+  event: InnerSource Summit 2021
+  date: 2021-11-01
+  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  description: How IBM adopted inner source practices and built a thriving internal open source community.
+
+# Podcast Appearances
+- title: "AI Code Generation: Wins, Fails and the Future"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2025-12-26
+  url: https://www.youtube.com/watch?v=oRRDAZtJLmk
+  description: Panel discussion on AI code generation tools including Claude Code.
+
+- title: "Claude Cowork analysis & Apple picks Gemini"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2026-01-16
+  url: https://www.youtube.com/watch?v=ym8GvNQBqA0
+  description: Analysis of Claude's cowork feature and Apple's AI strategy.
+
+- title: "IBM partners with Anthropic, plus OpenAI drops AgentKit"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2025-10-10
+  url: https://www.youtube.com/watch?v=lMrOvPloJ0o
+  description: Discussion of IBM-Anthropic partnership and OpenAI's AgentKit release.

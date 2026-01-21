@@ -9,7 +9,7 @@ title: Speaking
 </div>
 
 <div class="items-list">
-  {% for talk in speaking %}
+  {% for talk in speaking | sort(attribute='date') | reverse %}
   <article class="item-card">
     <h3>
       {% if talk.url %}
@@ -21,7 +21,7 @@ title: Speaking
     <p class="item-meta">
       {{ talk.event }}
       {% if talk.location %} &middot; {{ talk.location }}{% endif %}
-      {% if talk.date %} &middot; {{ talk.date }}{% endif %}
+      {% if talk.date %} &middot; {{ talk.date | dateFormat }}{% endif %}
     </p>
     <p class="item-description">{{ talk.description }}</p>
     {% if talk.url %}

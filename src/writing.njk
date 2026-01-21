@@ -9,13 +9,13 @@ title: Writing
 </div>
 
 <div class="items-list">
-  {% for article in writing %}
+  {% for article in writing | sort(attribute='date') | reverse %}
   <article class="item-card">
     <h3><a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.title }}</a></h3>
     <p class="item-meta">
       {% if article.publication %}{{ article.publication }}{% endif %}
       {% if article.publication and article.date %} &middot; {% endif %}
-      {% if article.date %}{{ article.date }}{% endif %}
+      {% if article.date %}{{ article.date | dateFormat }}{% endif %}
     </p>
     <p class="item-description">{{ article.description }}</p>
   </article>

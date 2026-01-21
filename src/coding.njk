@@ -9,17 +9,15 @@ title: Coding
 </div>
 
 <div class="items-list">
-  {% for project in coding %}
+  {% for repo in github.repos %}
   <article class="item-card">
-    <h3><a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a></h3>
-    {% if project.date %}
-    <p class="item-meta">{{ project.date }}</p>
-    {% endif %}
-    <p class="item-description">{{ project.description }}</p>
-    {% if project.tags %}
+    <h3><a href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.title }}</a></h3>
+    {% if repo.language %}<p class="item-meta">{{ repo.language }}</p>{% endif %}
+    <p class="item-description">{{ repo.description }}</p>
+    {% if repo.topics.length > 0 %}
     <div class="item-tags">
-      {% for tag in project.tags %}
-      <span class="tag">{{ tag }}</span>
+      {% for topic in repo.topics %}
+      <span class="tag">{{ topic }}</span>
       {% endfor %}
     </div>
     {% endif %}

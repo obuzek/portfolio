@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Contact
+---
+
+<div class="page-header">
+  <h1>Contact Me</h1>
+</div>
+
+<div class="content-page">
+  <p>The best way to reach me is to email me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>. I also occasionally check my {% for item in social %}{% if item.name == "LinkedIn" %}<a href="{{ item.url }}" target="_blank" rel="noopener">LinkedIn inbox</a>{% endif %}{% endfor %}.</p>
+
+  <h2>Speaking Opportunities</h2>
+  <p>If you'd like me to talk to your organization about how to best use open source generative AI, navigating an AI-heavy world, building an inner source-first organization, or engineering leadership, reach out.</p>
+
+  <h2>Hire Me</h2>
+  <p>If you think I'd be a good fit in your organization, email me.</p>
+</div>

@@ -1,26 +1,25 @@
 # Writing Portfolio
-# Add new publications by creating entries in this file
-# Format:
-#   - title: Article Title
-#     url: https://example.com/article
-#     publication: Publication Name
-#     description: Short description of the article
-#     date: 2024-01-15
 
-- title: Understanding Modern JavaScript Build Tools
-  url: https://example.com/js-build-tools
-  publication: Dev.to
-  description: A comprehensive guide to modern JavaScript build tools including Vite, esbuild, and webpack.
-  date: 2024-05-20
+- title: The Lifecycle View of Trustworthy AI
+  url: https://medium.com/ibm-data-ai/the-lifecycle-view-of-trustworthy-ai-a0006339a4cd
+  publication: IBM Data Science in Practice (Medium)
+  description: Discusses the five pillars of trust—fairness, robustness, explainability, privacy, and transparency—and IBM Research's open-source AI toolkits.
+  date: 2021-10-22
 
-- title: The Art of Writing Clean Code
-  url: https://example.com/clean-code
+- title: "NLU Enrichments Part 1: How to Utilize Sentiment, Keywords, and Emotion"
+  url: https://medium.com/@ombuzek/nlu-enrichments-part-1-how-to-utilize-sentiment-keywords-and-emotion-6da307e5f409
   publication: Medium
-  description: Practical tips and patterns for writing maintainable, readable code that stands the test of time.
-  date: 2024-02-14
+  description: How Watson Natural Language Understanding enrichments can uncover what people think and feel about a topic.
+  date: 2018-01-05
 
-- title: Getting Started with TypeScript in 2024
-  url: https://example.com/typescript-2024
-  publication: Smashing Magazine
-  description: An updated beginner's guide to TypeScript covering the latest features and best practices.
-  date: 2024-01-10
+- title: "NLU Enrichments Part 2: How to Utilize Entities, Relations, and Semantic Roles"
+  url: https://medium.com/@ombuzek/nlu-enrichments-part-2-how-to-utilize-entities-relations-and-semantic-roles-a9076308795c
+  publication: Medium
+  description: Using Natural Language Understanding to identify specific people, places, organizations and their relationships.
+  date: 2018-01-05
+
+- title: "NLU Enrichments Part 3: How to Utilize Metadata, Concepts, and Categories"
+  url: https://medium.com/@ombuzek/nlu-enrichments-part-3-how-to-utilize-metadata-concepts-and-categories-7eb75a378281
+  publication: Medium
+  description: Extracting meaning from unstructured data using metadata, category and concept enrichments.
+  date: 2018-01-05
