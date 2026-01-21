@@ -325,11 +325,25 @@ a:hover {
 }
 
 /* Home Page - Split Layout */
+body:has(.home-split) {
+  overflow: hidden;
+}
+
+body:has(.home-split) .site-main {
+  padding: 0 var(--spacing-lg);
+  max-width: none;
+}
+
+body:has(.home-split) .site-footer {
+  display: none;
+}
+
 .home-split {
   display: grid;
   grid-template-columns: 40% 60%;
-  min-height: calc(100vh - var(--header-height) - 80px);
+  height: calc(100vh - var(--header-height));
   gap: var(--spacing-xl);
+  overflow: hidden;
 }
 
 .home-left {
@@ -337,9 +351,6 @@ a:hover {
   align-items: center;
   justify-content: flex-start;
   padding: var(--spacing-xl) 0;
-  position: sticky;
-  top: var(--header-height);
-  height: calc(100vh - var(--header-height));
 }
 
 .home-left-content {
@@ -366,9 +377,8 @@ a:hover {
 }
 
 .home-right {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-xl) 0;
   overflow-y: auto;
-  max-height: calc(100vh - var(--header-height));
 }
 
 .about-section {
@@ -818,11 +828,21 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Home page mobile layout */
+  body:has(.home-split) {
+    overflow: auto;
+  }
+
+  body:has(.home-split) .site-footer {
+    display: block;
+  }
+
   .home-split {
     display: flex;
     flex-direction: column;
+    height: auto;
     min-height: auto;
     gap: 0;
+    overflow: visible;
   }
 
   .home-left {
