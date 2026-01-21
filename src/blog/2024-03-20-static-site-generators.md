@@ -2,6 +2,7 @@
 title: Why I Chose a Static Site Generator
 date: 2024-03-20
 excerpt: Exploring the decision to build this site with Eleventy and why static site generators are a great choice for portfolio sites.
+draft: true
 ---
 
 When building this portfolio site, I had many options to choose from. In the end, I went with [Eleventy](https://www.11ty.dev/), a static site generator. Here's why.

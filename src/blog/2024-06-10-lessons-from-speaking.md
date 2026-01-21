@@ -2,6 +2,7 @@
 title: Lessons Learned from Conference Speaking
 date: 2024-06-10
 excerpt: Reflections on what I've learned from giving technical talks at conferences and meetups.
+draft: true
 ---
 
 After several years of giving talks at conferences and meetups, I've accumulated some lessons that might help others who are starting their speaking journey.

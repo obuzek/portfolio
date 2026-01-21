@@ -5,11 +5,13 @@ title: Writing
 
 <div class="page-header">
   <h1>Writing</h1>
-  <p class="subtitle">Published articles and technical writing</p>
+  <p class="subtitle">Published articles, papers, and technical writing</p>
 </div>
 
+<h2 class="section-heading">Blog Posts & Articles</h2>
 <div class="items-list">
   {% for article in writing | sort(attribute='date') | reverse %}
+  {% if not article.type %}
   <article class="item-card">
     <h3><a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.title }}</a></h3>
     <p class="item-meta">
@@ -19,7 +21,23 @@ title: Writing
     </p>
     <p class="item-description">{{ article.description }}</p>
   </article>
-  {% else %}
-  <p>No writing listed yet. Check back soon!</p>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<h2 class="section-heading">Academic Publications</h2>
+<div class="items-list">
+  {% for article in writing | sort(attribute='date') | reverse %}
+  {% if article.type == 'paper' %}
+  <article class="item-card">
+    <h3><a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.title }}</a></h3>
+    <p class="item-meta">
+      {% if article.publication %}{{ article.publication }}{% endif %}
+      {% if article.publication and article.date %} &middot; {% endif %}
+      {% if article.date %}{{ article.date | dateFormat }}{% endif %}
+    </p>
+    <p class="item-description">{{ article.description }}</p>
+  </article>
+  {% endif %}
   {% endfor %}
 </div>

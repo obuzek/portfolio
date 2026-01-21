@@ -2,6 +2,7 @@
 title: Hello World
 date: 2024-01-15
 excerpt: Welcome to decoding ink! This is my first blog post where I introduce myself and share what to expect from this site.
+draft: true
 ---
 
 Welcome to decoding ink! I'm excited to finally have a space to share my thoughts on software development, technology, and everything in between.
