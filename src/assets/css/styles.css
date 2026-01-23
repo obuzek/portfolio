@@ -377,7 +377,7 @@ body:has(.home-split) .site-footer {
 }
 
 .home-right {
-  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-xl) 0;
+  padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xl) 0;
   overflow-y: auto;
 }
 
@@ -610,6 +610,24 @@ body:has(.home-split) .site-footer {
   padding: var(--spacing-xl);
   border: 1px solid var(--color-border);
   border-radius: 8px;
+}
+
+.resume-download {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.resume-download:hover {
+  color: var(--color-accent);
+}
+
+.resume-download svg {
+  width: 1em;
+  height: 1em;
 }
 
 .resume-section {
