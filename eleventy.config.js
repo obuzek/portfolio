@@ -58,7 +58,8 @@ module.exports = function(eleventyConfig) {
     return d.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'UTC'
     });
   });
 

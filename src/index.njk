@@ -60,15 +60,17 @@ title: Home
           }), allItems) %}
         {% endfor %}
 
-        {# Add blog posts #}
+        {# Add blog posts (exclude drafts) #}
         {% for post in collections.blog %}
-          {% set allItems = (allItems.push({
-            type: 'blog',
-            title: post.data.title,
-            url: post.url,
-            date: post.date,
-            meta: 'Blog'
-          }), allItems) %}
+          {% if not post.data.draft %}
+            {% set allItems = (allItems.push({
+              type: 'blog',
+              title: post.data.title,
+              url: post.url,
+              date: post.date,
+              meta: 'Blog'
+            }), allItems) %}
+          {% endif %}
         {% endfor %}
 
         {# Sort by date descending and display #}

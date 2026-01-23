@@ -340,7 +340,7 @@ body:has(.home-split) .site-footer {
 
 .home-split {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 25% 75%;
   height: calc(100vh - var(--header-height));
   gap: var(--spacing-xl);
   overflow: hidden;
@@ -472,6 +472,33 @@ body:has(.home-split) .site-footer {
   font-size: 0.8125rem;
   margin-left: auto;
   flex-shrink: 0;
+}
+
+/* Speaking page badges */
+.speaking-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-right: var(--spacing-sm);
+  vertical-align: middle;
+}
+
+.speaking-badge--conference {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fcd34d;
+}
+
+.speaking-badge--podcast {
+  background-color: rgba(244, 114, 182, 0.2);
+  color: #f9a8d4;
+}
+
+.speaking-badge--meetup {
+  background-color: rgba(52, 211, 153, 0.2);
+  color: #6ee7b7;
 }
 
 /* Legacy home intro styles (for backwards compatibility) */

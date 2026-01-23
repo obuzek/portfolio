@@ -6,7 +6,9 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "generate-qr": "node scripts/generate-qr.js"
+    "generate-qr": "node scripts/generate-qr.js",
+    "generate-resume": "node scripts/generate-resume-pdf.js",
+    "fetch-github": "node scripts/fetch-github-data.js"
   },
   "keywords": [],
   "author": "Olivia Buzek",

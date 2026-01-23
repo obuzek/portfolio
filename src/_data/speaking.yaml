@@ -3,28 +3,32 @@
 # Conference Talks
 - title: "Humans In the Loop: Collaborating in the Age of AI"
   event: InnerSource Summit 2025
-  date: 2024-12-01
-  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  date: 2025-11-13
+  type: conference
+  url: https://www.youtube.com/watch?v=I-sCDeIwej0
   description: Keynote on human-AI collaboration and what it means for inner source communities.
 
 - title: "Building Your (Local) LLM Second Brain"
   event: Open Source Summit North America
   location: Denver, CO
-  date: 2025-07-01
-  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  date: 2025-06-25
+  type: conference
+  url: https://www.youtube.com/watch?v=ba3jYrVFFzI
   description: How to build a local LLM-powered productivity system using open source tools.
 
 - title: "Building Your (Local) LLM Second Brain"
   event: DevOpsDays Austin
   location: Austin, TX
   date: 2025-05-01
-  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  type: conference
+  url: https://www.youtube.com/watch?v=NofX-NjtarA
   description: How to build a local LLM-powered productivity system using open source tools.
 
 - title: "Building Your (Local) LLM Second Brain"
   event: FOSDEM 2025
   location: Brussels, Belgium
   date: 2025-02-02
+  type: conference
   url: https://archive.fosdem.org/2025/schedule/event/fosdem-2025-6542-building-your-local-llm-second-brain/
   description: How to build a local LLM-powered productivity system using open source tools.
 
@@ -32,29 +36,35 @@
   event: Women in Data Science San Jose
   location: San Jose, CA
   date: 2025-10-24
+  link: https://luma.com/mm01kuy9
+  type: meetup
   description: Hands-on workshops on IBM Granite models and Docling document processing.
 
 - title: "Birth of InnerSource at IBM"
   event: InnerSource Summit 2021
   date: 2021-11-01
-  url: https://www.youtube.com/watch?v=VIDEO_ID_HERE
+  type: conference
+  url: https://www.youtube.com/watch?v=1x9FV2f4QoE
   description: How IBM adopted inner source practices and built a thriving internal open source community.
 
 # Podcast Appearances
 - title: "AI Code Generation: Wins, Fails and the Future"
   event: "Mixture of Experts (IBM Technology)"
   date: 2025-12-26
+  type: podcast
   url: https://www.youtube.com/watch?v=oRRDAZtJLmk
   description: Panel discussion on AI code generation tools including Claude Code.
 
 - title: "Claude Cowork analysis & Apple picks Gemini"
   event: "Mixture of Experts (IBM Technology)"
   date: 2026-01-16
+  type: podcast
   url: https://www.youtube.com/watch?v=ym8GvNQBqA0
   description: Analysis of Claude's cowork feature and Apple's AI strategy.
 
 - title: "IBM partners with Anthropic, plus OpenAI drops AgentKit"
   event: "Mixture of Experts (IBM Technology)"
   date: 2025-10-10
+  type: podcast
   url: https://www.youtube.com/watch?v=lMrOvPloJ0o
   description: Discussion of IBM-Anthropic partnership and OpenAI's AgentKit release.

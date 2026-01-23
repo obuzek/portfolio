@@ -5,156 +5,82 @@ title: Resume
 
 <div class="resume-content">
   <header class="resume-header">
-    <h1>Olivia Buzek</h1>
-    <p class="headline">Machine Learning Engineering Leader</p>
+    <h1>{{ resume.name }}</h1>
+    <p class="headline">{{ resume.headline }}</p>
     <p>
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a> |
-      <a href="https://decoding.ink">decoding.ink</a> |
-      <a href="https://linkedin.com/in/oliviabuzek">LinkedIn</a>
+      <a href="mailto:{{ resume.email }}">{{ resume.email }}</a> |
+      <a href="{{ resume.website }}">decoding.ink</a> |
+      <a href="{{ resume.linkedin }}">LinkedIn</a>
     </p>
   </header>
 
   <section class="resume-section">
     <h2>Summary</h2>
-    <p>Experienced leader of machine learning and responsible AI teams, with an extensive background in collaborative development practices. Highlights include bringing inner source to an enterprise organization, launching reusable libraries around NLP and trustworthy AI, and implementing guardrails for LLMs. Committed to fostering collaboration and ethical practices to drive impact for clients and positive societal outcomes.</p>
+    <p>{{ resume.summary }}</p>
   </section>
 
   <section class="resume-section">
     <h2>Key Competencies</h2>
     <div class="competencies">
-      <span class="competency">MLOps & LLMOps</span>
-      <span class="competency">Trustworthy & Responsible AI</span>
-      <span class="competency">Natural Language Processing</span>
-      <span class="competency">Inner Source Transformation</span>
-      <span class="competency">ML Strategy</span>
-      <span class="competency">Agile Leadership</span>
+      {%- for competency in resume.competencies %}
+      <span class="competency">{{ competency }}</span>
+      {%- endfor %}
     </div>
   </section>
 
   <section class="resume-section">
     <h2>Experience</h2>
-
+    {%- for job in resume.experience %}
     <div class="resume-entry">
-      <h3>Program Director / Senior Technical Staff Member</h3>
-      <p class="company">IBM Research - watsonx.ai Platform Trustworthy AI</p>
-      <p class="dates">Nov 2021 - Present</p>
+      <h3>{{ job.title }}</h3>
+      <p class="company">{{ job.company }}</p>
+      <p class="dates">{{ job.dateRange }}</p>
       <ul>
-        <li>Led productionization of IBM's state-of-the-art Trustworthy / Responsible AI research into LLMOps and MLOps systems</li>
-        <li>Awarded rank of STSM (requiring 15 executive-level references and committee review) to expand practices as core leader of the watsonx.ai Platform and lead its ethical AI strategy</li>
-        <li>Won Outstanding Technical Achievement Award and IBM Corporate Award for inner sourcing IBM's first reusable NLP stack, Watson NLP - now the de facto standard for NLP at IBM</li>
-        <li>Founded Inner Source Program Office at IBM in 2021, now a core component of IBM's technical strategy and included in the Global Technology Outlook for 2022</li>
-        <li>Developed Watson Trust, a production-ready Python-based sklearn-compatible library for Trustworthy AI</li>
-        <li>Co-launched internal startup Conveyor.ai for low-code machine learning orchestration</li>
+        {%- for highlight in job.highlights %}
+        <li>{{ highlight }}</li>
+        {%- endfor %}
       </ul>
     </div>
-
-    <div class="resume-entry">
-      <h3>Senior Engineering Manager</h3>
-      <p class="company">IBM Watson</p>
-      <p class="dates">Jul 2019 - Nov 2021</p>
-      <ul>
-        <li>Managed a team of 10 machine learning engineers across two cross-functional cloud and ML squads</li>
-        <li>Oversaw merger of two major NLP SaaS products, growing organization and onboarding remote teams into integrated matrix management</li>
-        <li>Guided team towards architecture decreasing time-to-value on new ML features from 9 months to 3 months</li>
-        <li>Improved internal developer experience NPS score by 20 points over one quarter</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <h3>Engineering Manager</h3>
-      <p class="company">IBM Watson</p>
-      <p class="dates">May 2018 - Jun 2019</p>
-      <ul>
-        <li>Managed a team of 6 machine learning engineers</li>
-        <li>Stabilized a high attrition and low morale product team, bringing attrition to effectively zero over one year</li>
-        <li>Created an Algorithms Guild for skills development and ML problem-solving discussions</li>
-        <li>Developed Innovation Time framework leading to beta features for explainability</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <h3>Machine Learning Engineer</h3>
-      <p class="company">IBM Watson</p>
-      <p class="dates">Nov 2015 - Apr 2018</p>
-      <ul>
-        <li>Led language expansion effort, reducing time to new language for all features by 75% - won ISSIP Excellence in Service Innovation Award</li>
-        <li>Updated algorithms for NLP features including Keywords, Entities and Concepts; developed new Entities algorithm in TensorFlow</li>
-        <li>Built Python microservices for NLP features to replace legacy monolith</li>
-        <li>Gave internal talk "Linguistics for NLP System Builders" to help engineers understand linguistic concepts</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <h3>Forward Deployed Engineer</h3>
-      <p class="company">Palantir</p>
-      <p class="dates">Nov 2012 - Jul 2015</p>
-      <ul>
-        <li>Led technical outcomes for two large government client engagements</li>
-        <li>Maintained user-facing data analysis stack and built front-end data analytics solutions with Java, Oracle, and open source technologies</li>
-        <li>Improved Java-based data integrations with modern libraries, better error handling, and stability</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <h3>Graduate Student Researcher</h3>
-      <p class="company">Johns Hopkins University</p>
-      <p class="dates">Jun 2011 - Jun 2013</p>
-      <ul>
-        <li>Designed probabilistic graphical model based on LDA for text analysis and personality trait prediction</li>
-        <li>Built prediction system in Python for user schedules using Twitter data linguistic cues</li>
-      </ul>
-    </div>
-
-    <div class="resume-entry">
-      <h3>Undergraduate Research Assistant</h3>
-      <p class="company">University of Maryland Institute for Advanced Computer Studies</p>
-      <p class="dates">Nov 2009 - Jun 2011</p>
-      <ul>
-        <li>Developed algorithm in Ruby to identify difficult-to-translate spans in machine translation context</li>
-        <li>Improved runtime efficiency for exponential algorithm generating alternate sentence phrasings</li>
-      </ul>
-    </div>
+    {%- endfor %}
   </section>
 
   <section class="resume-section">
     <h2>Education</h2>
-
+    {%- for edu in resume.education %}
     <div class="resume-entry">
-      <h3>Graduate Coursework - Machine Learning & NLP</h3>
-      <p class="institution">Johns Hopkins University, Baltimore, MD</p>
-      <p class="dates">Sep 2011 - Jun 2013</p>
+      <h3>{{ edu.institution }}</h3>
+      <p class="company">{{ edu.degree }}</p>
+      <p class="dates">{{ edu.dateRange }}</p>
+      {%- if edu.note %}
+      <p>{{ edu.note }}</p>
+      {%- endif %}
     </div>
-
-    <div class="resume-entry">
-      <h3>B.S. Computer Science</h3>
-      <p class="institution">University of Maryland, College Park, MD</p>
-      <p class="dates">Sep 2007 - Jun 2011</p>
-      <p>College Park Scholars Program</p>
-    </div>
+    {%- endfor %}
   </section>
 
   <section class="resume-section">
     <h2>Skills</h2>
-    <p><strong>Languages:</strong> Python, Java, C++, Ruby</p>
-    <p><strong>ML/AI:</strong> TensorFlow, PyTorch, scikit-learn, NLP, LLMs</p>
-    <p><strong>Infrastructure:</strong> Kubernetes, Docker, AWS</p>
-    <p><strong>Practices:</strong> MLOps, LLMOps, Inner Source, Agile Leadership</p>
+    <p><strong>Languages:</strong> {{ resume.skills.languages | join(', ') }}</p>
+    <p><strong>ML/AI:</strong> {{ resume.skills.ml_ai | join(', ') }}</p>
+    <p><strong>Infrastructure:</strong> {{ resume.skills.infrastructure | join(', ') }}</p>
+    <p><strong>Practices:</strong> {{ resume.skills.practices | join(', ') }}</p>
   </section>
 
   <section class="resume-section">
     <h2>Awards & Recognition</h2>
     <ul>
-      <li>IBM Corporate Award, 2022</li>
-      <li>IBM Outstanding Technical Achievement Award, 2021</li>
-      <li>ISSIP Excellence in Service Innovation Award, 2017</li>
+      {%- for award in resume.awards %}
+      <li>{{ award.name }}, {{ award.year }}</li>
+      {%- endfor %}
     </ul>
   </section>
 
   <section class="resume-section">
     <h2>Speaking & Writing</h2>
     <ul>
-      <li>"The Lifecycle View of Trustworthy AI" - Medium, October 2021</li>
-      <li>"Birth of InnerSource at IBM" - InnerSource Summit, November 2021</li>
+      {%- for pub in resume.publications %}
+      <li>"{{ pub.title }}" - {{ pub.venue }}, {{ pub.date }}</li>
+      {%- endfor %}
     </ul>
     <p>See the <a href="/speaking/">Speaking</a> and <a href="/writing/">Writing</a> pages for more.</p>
   </section>

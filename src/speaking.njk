@@ -12,6 +12,7 @@ title: Speaking
   {% for talk in speaking | sort(attribute='date') | reverse %}
   <article class="item-card">
     <h3>
+      {% if talk.type %}<span class="speaking-badge speaking-badge--{{ talk.type }}">{{ talk.type }}</span>{% endif %}
       {% if talk.url %}
       <a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
       {% else %}

@@ -1,0 +1,140 @@
+name: Olivia Buzek
+headline: Machine Learning Engineering Leader
+email: opportunities@decoding.ink
+location: Colorado, USA
+website: https://decoding.ink
+linkedin: https://linkedin.com/in/oliviabuzek
+
+summary: >
+  Experienced leader of machine learning and responsible AI teams, with an extensive
+  background in collaborative development practices. Highlights include bringing inner
+  source to an enterprise organization, launching reusable libraries around NLP and
+  trustworthy AI, and implementing guardrails for LLMs. Committed to fostering
+  collaboration and ethical practices to drive impact for clients and positive societal outcomes.
+
+competencies:
+  - MLOps & LLMOps
+  - Trustworthy & Responsible AI
+  - Natural Language Processing
+  - Inner Source Transformation
+  - ML Strategy
+  - Agile Leadership
+
+experience:
+  - title: Program Director / Senior Technical Staff Member
+    company: IBM Research - watsonx.ai Platform Trustworthy AI
+    start: 2021-11
+    end: present
+    highlights:
+      - Led productionization of IBM's state-of-the-art Trustworthy / Responsible AI research into LLMOps and MLOps systems
+      - Awarded rank of STSM (requiring 15 executive-level references and committee review) to expand practices as core leader of the watsonx.ai Platform and lead its ethical AI strategy
+      - Won Outstanding Technical Achievement Award and IBM Corporate Award for inner sourcing IBM's first reusable NLP stack, Watson NLP - now the de facto standard for NLP at IBM
+      - Founded Inner Source Program Office at IBM in 2021, now a core component of IBM's technical strategy and included in the Global Technology Outlook for 2022
+      - Developed Watson Trust, a production-ready Python-based sklearn-compatible library for Trustworthy AI
+      - Co-launched internal startup Conveyor.ai for low-code machine learning orchestration
+
+  - title: Senior Engineering Manager
+    company: IBM Watson
+    start: 2019-07
+    end: 2021-11
+    highlights:
+      - Managed a team of 10 machine learning engineers across two cross-functional cloud and ML squads
+      - Oversaw merger of two major NLP SaaS products, growing organization and onboarding remote teams into integrated matrix management
+      - Guided team towards architecture decreasing time-to-value on new ML features from 9 months to 3 months
+      - Improved internal developer experience NPS score by 20 points over one quarter
+
+  - title: Engineering Manager
+    company: IBM Watson
+    start: 2018-05
+    end: 2019-06
+    highlights:
+      - Managed a team of 6 machine learning engineers
+      - Stabilized a high attrition and low morale product team, bringing attrition to effectively zero over one year
+      - Created an Algorithms Guild for skills development and ML problem-solving discussions
+      - Developed Innovation Time framework leading to beta features for explainability
+
+  - title: Machine Learning Engineer
+    company: IBM Watson
+    start: 2015-11
+    end: 2018-04
+    highlights:
+      - Led language expansion effort, reducing time to new language for all features by 75% - won ISSIP Excellence in Service Innovation Award
+      - Updated algorithms for NLP features including Keywords, Entities and Concepts; developed new Entities algorithm in TensorFlow
+      - Built Python microservices for NLP features to replace legacy monolith
+      - Gave internal talk "Linguistics for NLP System Builders" to help engineers understand linguistic concepts
+
+  - title: Forward Deployed Engineer
+    company: Palantir
+    start: 2012-11
+    end: 2015-07
+    highlights:
+      - Led technical outcomes for two large government client engagements
+      - Maintained user-facing data analysis stack and built front-end data analytics solutions with Java, Oracle, and open source technologies
+      - Improved Java-based data integrations with modern libraries, better error handling, and stability
+
+  - title: Graduate Student Researcher
+    company: Johns Hopkins University
+    start: 2011-06
+    end: 2013-06
+    highlights:
+      - Designed probabilistic graphical model based on LDA for text analysis and personality trait prediction
+      - Built prediction system in Python for user schedules using Twitter data linguistic cues
+
+  - title: Undergraduate Research Assistant
+    company: University of Maryland Institute for Advanced Computer Studies
+    start: 2009-11
+    end: 2011-06
+    highlights:
+      - Developed algorithm in Ruby to identify difficult-to-translate spans in machine translation context
+      - Improved runtime efficiency for exponential algorithm generating alternate sentence phrasings
+
+education:
+  - degree: Computational Linguistics
+    institution: Johns Hopkins University
+    location: Baltimore, MD
+    start: 2011-09
+    end: 2013-06
+
+  - degree: B.S. Computer Science and Linguistics
+    institution: University of Maryland
+    location: College Park, MD
+    start: 2007-09
+    end: 2011-06
+    note: College Park Scholars Program
+
+skills:
+  languages:
+    - Python
+    - Java
+    - C++
+    - Ruby
+  ml_ai:
+    - Ollama
+    - llama.cpp
+    - PyTorch
+    - NLP
+  infrastructure:
+    - Kubernetes
+    - Docker
+    - AWS
+  practices:
+    - MLOps
+    - LLMOps
+    - Inner Source
+    - Agile Leadership
+
+awards:
+  - name: IBM Corporate Award
+    year: 2022
+  - name: IBM Outstanding Technical Achievement Award
+    year: 2021
+  - name: ISSIP Excellence in Service Innovation Award
+    year: 2017
+
+publications:
+  - title: "The Lifecycle View of Trustworthy AI"
+    venue: Medium
+    date: 2021-10
+  - title: "Birth of InnerSource at IBM"
+    venue: InnerSource Summit
+    date: 2021-11
