@@ -24,11 +24,10 @@ competencies:
   - Trustworthy & Responsible AI
   - Natural Language Processing
   - Inner Source Transformation
-  - ML Strategy
-  - Agile Leadership
+  - AI Strategy
 
 experience:
-  - title: Senior Technical Staff Member - Trustworthy AI Tech Lead
+  - title: Senior Staff Engineer - Trustworthy AI Tech Lead
     company: IBM Research - watsonx.ai Platform
     start: 2021-11
     end: present
@@ -147,7 +146,6 @@ skills:
     - LLMOps
     - Trustworthy & Responsible AI
     - Inner Source
-    - Agile Leadership
 
 awards:
   - name: IBM Corporate Award

@@ -128,13 +128,13 @@
 
 #text(size: 8pt)[
   #email-icon #h(0.15em) #link("mailto:{{EMAIL}}")[#"{{EMAIL}}"]
-  #h(0.8em)
+  #h(1fr)
   #web-icon #h(0.15em) #link("{{WEBSITE}}")[decoding.ink]
-  #h(0.8em)
+  #h(1fr)
   #github-icon #h(0.15em) #link("{{GITHUB}}")[GitHub]
-  #h(0.8em)
+  #h(1fr)
   #linkedin-icon #h(0.15em) #link("{{LINKEDIN}}")[LinkedIn]
-  #h(0.8em)
+  #h(1fr)
   #youtube-icon #h(0.15em) #link("{{YOUTUBE}}")[YouTube]
 ]
 
