@@ -61,7 +61,9 @@ title: Resume
   <section class="resume-section">
     <h2>Skills</h2>
     <p><strong>Languages:</strong> {{ resume.skills.languages | join(', ') }}</p>
-    <p><strong>ML/AI:</strong> {{ resume.skills.ml_ai | join(', ') }}</p>
+    <p><strong>AI/ML:</strong> {{ resume.skills.ai_ml | join(', ') }}</p>
+    <p><strong>Models:</strong> {{ resume.skills.models | join(', ') }}</p>
+    <p><strong>Platforms:</strong> {{ resume.skills.platforms | join(', ') }}</p>
     <p><strong>Infrastructure:</strong> {{ resume.skills.infrastructure | join(', ') }}</p>
     <p><strong>Practices:</strong> {{ resume.skills.practices | join(', ') }}</p>
   </section>
@@ -76,12 +78,23 @@ title: Resume
   </section>
 
   <section class="resume-section">
-    <h2>Speaking & Writing</h2>
+    <h2>Selected Publications & Talks</h2>
+    {%- if resume.highlightedPublications.length > 0 %}
+    <h3>Publications</h3>
     <ul>
-      {%- for pub in resume.publications %}
-      <li>"{{ pub.title }}" - {{ pub.venue }}, {{ pub.date }}</li>
+      {%- for pub in resume.highlightedPublications %}
+      <li><a href="{{ pub.url }}">{{ pub.title }}</a>. <em>{{ pub.publication }}</em>, {{ pub.year }}.</li>
       {%- endfor %}
     </ul>
+    {%- endif %}
+    {%- if resume.highlightedTalks.length > 0 %}
+    <h3>Talks</h3>
+    <ul>
+      {%- for talk in resume.highlightedTalks %}
+      <li><a href="{{ talk.url }}">{{ talk.title }}</a>. {{ talk.event }}, {{ talk.year }}.</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
     <p>See the <a href="/speaking/">Speaking</a> and <a href="/writing/">Writing</a> pages for more.</p>
   </section>
 </div>

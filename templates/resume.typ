@@ -13,6 +13,9 @@
 
 #set par(justify: true, leading: 0.5em)
 
+// Style links with underline
+#show link: it => underline(it)
+
 // Section heading
 #let section(title) = {
   v(0.3em)
@@ -22,17 +25,20 @@
   v(0.15em)
 }
 
-// Experience entry - title and company tightly bound, space before bullets
-#let experience-entry(title, company, dates) = {
-  v(0.4em)
-  grid(
-    columns: (1fr, auto),
-    text(weight: "bold")[#title],
-    text(style: "italic", size: 8pt)[#dates],
-  )
-  v(-0.3em)
-  text(fill: rgb("#555"))[#company]
-  v(0.2em)
+// Experience entry - title, company, and highlights kept together
+#let experience-entry(title, company, dates, highlights) = {
+  block(breakable: false)[
+    #v(0.4em)
+    #grid(
+      columns: (1fr, auto),
+      text(weight: "bold")[#title],
+      text(style: "italic", size: 8pt)[#dates],
+    )
+    #v(-0.3em)
+    #text(fill: rgb("#555"))[#company]
+    #v(0.2em)
+    #highlights
+  ]
 }
 
 // Education entry (institution first)
@@ -157,3 +163,7 @@
 // Awards
 #section[Awards & Recognition]
 {{AWARDS}}
+
+// Selected Publications & Talks
+#section[Selected Publications & Talks]
+{{PUBLICATIONS_AND_TALKS}}

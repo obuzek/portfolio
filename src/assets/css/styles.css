@@ -663,6 +663,23 @@ body:has(.home-split) .site-footer {
   margin-bottom: 0.25rem;
 }
 
+.competencies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.competency {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-accent-light);
+  font-weight: 500;
+}
+
 /* Blog */
 .blog-list {
   display: flex;

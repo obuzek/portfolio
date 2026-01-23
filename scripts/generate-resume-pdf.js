@@ -5,8 +5,10 @@ const { execSync } = require('child_process');
 
 // Paths
 const rootDir = path.join(__dirname, '..');
-const dataPath = path.join(rootDir, 'src/_data/resume.yaml');
+const dataPath = path.join(rootDir, 'src/_data/_resume.yaml');
 const socialPath = path.join(rootDir, 'src/_data/social.yaml');
+const writingPath = path.join(rootDir, 'src/_data/writing.yaml');
+const speakingPath = path.join(rootDir, 'src/_data/speaking.yaml');
 const templatePath = path.join(rootDir, 'templates/resume.typ');
 const outputDir = path.join(rootDir, 'src/assets');
 const outputPath = path.join(outputDir, 'olivia-buzek-resume.pdf');
@@ -14,6 +16,8 @@ const outputPath = path.join(outputDir, 'olivia-buzek-resume.pdf');
 // Load resume data
 const resumeData = yaml.load(fs.readFileSync(dataPath, 'utf8'));
 const socialData = yaml.load(fs.readFileSync(socialPath, 'utf8'));
+const writingData = yaml.load(fs.readFileSync(writingPath, 'utf8'));
+const speakingData = yaml.load(fs.readFileSync(speakingPath, 'utf8'));
 
 // Extract social links
 const socialLinks = {};
@@ -39,9 +43,9 @@ function generateExperience(experience) {
   return experience.map(job => {
     const dates = `${formatDate(job.start)} - ${formatDate(job.end)}`;
     const highlights = job.highlights.map(h => `- ${h}`).join('\n');
-    return `#experience-entry[${job.title}][${job.company}][${dates}]
+    return `#experience-entry[${job.title}][${job.company}][${dates}][
 ${highlights}
-`;
+]`;
   }).join('\n');
 }
 
@@ -63,8 +67,14 @@ function generateSkills(skills) {
   if (skills.languages) {
     lines.push(`*Languages:* ${skills.languages.join(', ')}`);
   }
-  if (skills.ml_ai) {
-    lines.push(`*ML/AI:* ${skills.ml_ai.join(', ')}`);
+  if (skills.ai_ml) {
+    lines.push(`*AI/ML:* ${skills.ai_ml.join(', ')}`);
+  }
+  if (skills.models) {
+    lines.push(`*Models:* ${skills.models.join(', ')}`);
+  }
+  if (skills.platforms) {
+    lines.push(`*Platforms:* ${skills.platforms.join(', ')}`);
   }
   if (skills.infrastructure) {
     lines.push(`*Infrastructure:* ${skills.infrastructure.join(', ')}`);
@@ -78,6 +88,48 @@ function generateSkills(skills) {
 // Generate awards section
 function generateAwards(awards) {
   return awards.map(a => `- ${a.name}, ${a.year}`).join('\n');
+}
+
+// Extract year from a date (handles Date objects and strings)
+function getYear(date) {
+  if (date instanceof Date) {
+    return date.getFullYear().toString();
+  }
+  return date.toString().split('-')[0];
+}
+
+// Generate highlighted publications and talks section (APA-style with links)
+function generatePublicationsAndTalks(writing, speaking) {
+  const highlightedPubs = writing
+    .filter(item => item.highlighted)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const highlightedTalks = speaking
+    .filter(item => item.highlighted)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const lines = [];
+
+  if (highlightedPubs.length > 0) {
+    lines.push('*Publications:*');
+    highlightedPubs.forEach(pub => {
+      const year = getYear(pub.date);
+      // APA style: Title. Publication, Year.
+      lines.push(`- #link("${pub.url}")[${pub.title}]. _${pub.publication}_, ${year}.`);
+    });
+  }
+
+  if (highlightedTalks.length > 0) {
+    if (lines.length > 0) lines.push('');
+    lines.push('*Talks:*');
+    highlightedTalks.forEach(talk => {
+      const year = getYear(talk.date);
+      // APA style: Title. Event, Year.
+      lines.push(`- #link("${talk.url}")[${talk.title}]. ${talk.event}, ${year}.`);
+    });
+  }
+
+  return lines.join('\n');
 }
 
 // Read template and replace placeholders
@@ -98,6 +150,7 @@ const replacements = {
   '{{EDUCATION}}': generateEducation(resumeData.education),
   '{{SKILLS}}': generateSkills(resumeData.skills),
   '{{AWARDS}}': generateAwards(resumeData.awards),
+  '{{PUBLICATIONS_AND_TALKS}}': generatePublicationsAndTalks(writingData, speakingData),
 };
 
 for (const [placeholder, value] of Object.entries(replacements)) {

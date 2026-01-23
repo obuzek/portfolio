@@ -9,7 +9,7 @@ summary: >
   AI engineering leader with 15 years of experience refining and opening up siloed AI capabilities. I led work 
   that coalesced 20 years of fragmented NLP development into a single shared library, brought inner source practices to enterprise
   ML, and turned research-grade responsible AI into something product teams could ship.
-  I can help you create AI applications that save humans time, rather than replace human ingenuity.
+  I can help you create AI applications that save labor, rather than replace human ingenuity.
 
 # Original summary (pre-2025 revision):
 # summary: >
@@ -72,34 +72,34 @@ experience:
     end: 2018-04
     highlights:
       - Drove language expansion effort, ensuring NLP features reached non-English speaking users. Reduced time to add a new language by 75%. Won ISSIP Excellence in Service Innovation Award.
-      - Updated algorithms for NLP features including Keywords, Entities and Concepts; developed new Entities algorithm in TensorFlow
-      - Built Python microservices for NLP features to replace legacy monolith
-      - Gave internal talk "Linguistics for NLP System Builders" to help engineers understand linguistic concepts
+      - Updated algorithms for NLP features including Keywords, Entities and Concepts; developed new Entities algorithm in TensorFlow.
+      - Built Python microservices for NLP features to replace legacy monolith.
+      - Gave internal talk "Linguistics for NLP System Builders" to help engineers understand linguistic concepts.
 
   - title: Forward Deployed Engineer
     company: Palantir
     start: 2012-11
     end: 2015-07
     highlights:
-      - Led technical outcomes for two large government client engagements
-      - Maintained user-facing data analysis stack and built front-end data analytics solutions with Java, Oracle, and open source technologies
-      - Improved Java-based data integrations with modern libraries, better error handling, and stability
+      - Led technical outcomes for two large government client engagements.
+      - Maintained user-facing data analysis stack and built front-end data analytics solutions with Java, Oracle, and open source technologies.
+      - Improved Java-based data integrations with modern libraries, better error handling, and stability.
 
   - title: Graduate Student Researcher
     company: Johns Hopkins University
     start: 2011-06
     end: 2013-06
     highlights:
-      - Designed probabilistic graphical model based on LDA for text analysis and personality trait prediction
-      - Built prediction system in Python for user schedules using Twitter data linguistic cues
+      - Designed probabilistic graphical model based on LDA for text analysis and personality trait prediction.
+      - Built prediction system in Python for user schedules using Twitter data linguistic cues.
 
   - title: Undergraduate Research Assistant
     company: University of Maryland Institute for Advanced Computer Studies
     start: 2009-11
     end: 2011-06
     highlights:
-      - Developed algorithm in Ruby to identify difficult-to-translate spans in machine translation context
-      - Improved runtime efficiency for exponential algorithm generating alternate sentence phrasings
+      - Developed algorithm in Ruby to identify difficult-to-translate spans in machine translation context.
+      - Improved runtime efficiency for exponential algorithm generating alternate sentence phrasings.
 
 education:
   - degree: Computational Linguistics
@@ -120,12 +120,24 @@ skills:
     - Python
     - Java
     - C++
-    - Ruby
-  ml_ai:
+    - Node.js
+  ai_ml:
+    - PyTorch
+    - TensorFlow
+    - scikit-learn
+    - Hugging Face Transformers
+    - LangChain
+    - CrewAI
+    - Docling
     - Ollama
     - llama.cpp
-    - PyTorch
-    - NLP
+  models:
+    - Granite
+    - Llama
+    - Claude
+  platforms:
+    - watsonx.ai
+    - watsonx Orchestrate
   infrastructure:
     - Kubernetes
     - Docker
@@ -133,6 +145,7 @@ skills:
   practices:
     - MLOps
     - LLMOps
+    - Trustworthy & Responsible AI
     - Inner Source
     - Agile Leadership
 

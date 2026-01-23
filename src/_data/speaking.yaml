@@ -7,6 +7,7 @@
   type: conference
   url: https://www.youtube.com/watch?v=I-sCDeIwej0
   description: Keynote on human-AI collaboration and what it means for inner source communities.
+  highlighted: true
 
 - title: "Building Your (Local) LLM Second Brain"
   event: Open Source Summit North America
@@ -15,6 +16,7 @@
   type: conference
   url: https://www.youtube.com/watch?v=ba3jYrVFFzI
   description: How to build a local LLM-powered productivity system using open source tools.
+  highlighted: true
 
 - title: "Building Your (Local) LLM Second Brain"
   event: DevOpsDays Austin
@@ -46,6 +48,7 @@
   type: conference
   url: https://www.youtube.com/watch?v=1x9FV2f4QoE
   description: How IBM adopted inner source practices and built a thriving internal open source community.
+  highlighted: true
 
 # Podcast Appearances
 - title: "AI Code Generation: Wins, Fails and the Future"

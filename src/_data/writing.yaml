@@ -8,6 +8,7 @@
   description: Research on leveraging crowdsourcing and paraphrasing techniques to improve machine translation quality.
   date: 2013-01-01
   type: paper
+  highlighted: true
 
 - title: "Nerit: Named entity recognition for informal text"
   url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UIPXrOUAAAAJ&citation_for_view=UIPXrOUAAAAJ:zYLM7Y9cAGgC
@@ -36,6 +37,7 @@
   description: Presented a method to improve machine translation by using targeted paraphrasing of source text.
   date: 2010-01-01
   type: paper
+  highlighted: true
 
 - title: "Error driven paraphrase annotation using mechanical turk"
   url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UIPXrOUAAAAJ&citation_for_view=UIPXrOUAAAAJ:u-x6o8ySG0sC
@@ -43,6 +45,7 @@
   description: Used crowdsourcing to collect paraphrase annotations driven by machine translation errors.
   date: 2010-01-01
   type: paper
+  highlighted: true
 
 - title: "Crowdsourcing the evaluation of a domain-adapted named entity recognition system"
   url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UIPXrOUAAAAJ&citation_for_view=UIPXrOUAAAAJ:qjMakFHDy7sC
@@ -72,6 +75,7 @@
   publication: IBM Data Science in Practice (Medium)
   description: Discusses the five pillars of trust—fairness, robustness, explainability, privacy, and transparency—and IBM Research's open-source AI toolkits.
   date: 2021-10-22
+  highlighted: true
 
 - title: "NLU Enrichments Part 1: How to Utilize Sentiment, Keywords, and Emotion"
   url: https://medium.com/@ombuzek/nlu-enrichments-part-1-how-to-utilize-sentiment-keywords-and-emotion-6da307e5f409
