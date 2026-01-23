@@ -71,7 +71,7 @@ async function fetchGitHubData() {
     }));
 
     // Write to YAML file
-    const outputPath = path.join(__dirname, '../src/_data/github.yaml');
+    const outputPath = path.join(__dirname, '../src/_data/_github.yaml');
     const yamlContent = yaml.dump({ repos: pinnedRepos }, { lineWidth: -1 });
     fs.writeFileSync(outputPath, yamlContent);
 

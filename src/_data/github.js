@@ -5,7 +5,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 module.exports = function() {
-  const cachePath = path.join(__dirname, 'github.yaml');
+  const cachePath = path.join(__dirname, '_github.yaml');
 
   if (fs.existsSync(cachePath)) {
     const data = yaml.load(fs.readFileSync(cachePath, 'utf8'));
