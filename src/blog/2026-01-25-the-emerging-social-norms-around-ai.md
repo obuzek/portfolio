@@ -2,6 +2,8 @@
 title: on designing for the emerging social norms around AI
 date: 2026-01-25
 excerpt: A discussion of the knowledge creator critiques of AI usage, the design choices in chatbots that have led us here, and whether we can build our way out of this situation.
+author: Olivia Buzek
+authorUrl: https://decoding.ink
 draft: false
 ---
 

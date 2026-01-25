@@ -5,7 +5,7 @@ layout: layouts/base.njk
 <article class="blog-post">
   <header class="blog-post-header">
     <h1>{{ title }}</h1>
-    <p class="post-meta">{{ date | dateFormat }}</p>
+    <p class="post-meta">{{ date | dateFormat }}{% if author %} · by <a href="{{ authorUrl }}">{{ author }}</a>{% endif %}</p>
   </header>
 
   <div class="blog-post-content">
