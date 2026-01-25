@@ -2,6 +2,9 @@ const yaml = require('js-yaml');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const markdownIt = require('markdown-it');
+const markdownItFootnote = require('markdown-it-footnote');
+const markdownItAnchor = require('markdown-it-anchor');
 
 // Generate QR code once at startup (outside the config function)
 const qrPath = path.join(__dirname, 'src/assets/images/qr-code.svg');
@@ -11,6 +14,17 @@ if (!fs.existsSync(qrPath)) {
 }
 
 module.exports = function(eleventyConfig) {
+  // Configure markdown-it with footnotes and anchor links
+  const md = markdownIt({ html: true })
+    .use(markdownItFootnote)
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.linkInsideHeader({
+        symbol: '#',
+        placement: 'after'
+      }),
+      slugify: s => s.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '')
+    });
+  eleventyConfig.setLibrary('md', md);
 
   // Add YAML support for data files
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
