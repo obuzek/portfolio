@@ -6,6 +6,11 @@
   NODE_VERSION = "20"
 
 [[redirects]]
+  from = "/career"
+  to = "https://docs.google.com/presentation/d/1jI_YU0_vfYA-ewWNubxK-PpxI3C1lFlfnl8RLumeP8w/edit?usp=sharing"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
