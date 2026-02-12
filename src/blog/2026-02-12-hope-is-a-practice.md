@@ -1,7 +1,7 @@
 ---
 title: hope is a practice
 date: 2026-02-12
-excerpt: Let’s posit, though, just for a moment, that the predictions are all right: coding is over; it’ll all be done by machines going forward. If that’s true, I want you to imagine a much better world.
+excerpt: "Let's posit, though, just for a moment, that the predictions are all right: coding is over; it'll all be done by machines going forward. If that's true, I want you to imagine a much better world."
 author: Olivia Buzek
 authorUrl: https://decoding.ink
 draft: false
