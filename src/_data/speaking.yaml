@@ -1,6 +1,21 @@
 # Speaking Engagements
 
 # Conference Talks
+- title: "Taming MCP Server Sprawl: Securing and Scaling the Model Context Protocol in Production"
+  event: Open Source Summit North America 2026
+  date: 2026-05-18
+  type: conference
+  url: https://osselcna2026.sched.com/event/2JQr7/taming-mcp-server-sprawl-securing-and-scaling-the-model-context-protocol-in-production-jeffrey-borek-olivia-buzek-ibm
+  description: Technology breakout on ContextForge, the MCP ecosystem, and how to handle an entire organization's worth of MCP servers.
+
+- title: "Building Responsible AI Agents with Open Source"
+  event: ODSC East AI 2026
+  date: 2026-04-27
+  type: conference
+  url: https://opendatascience.com/cant-attend-odsc-ai-east-2026-in-person-join-these-virtual-sessions-instead/
+  description: Workshop on how to build agentic AI responsibly in contexts with sensitive data.
+  highlighted: true
+
 - title: "Humans In the Loop: Collaborating in the Age of AI"
   event: InnerSource Summit 2025
   date: 2025-11-13
@@ -51,6 +66,13 @@
   highlighted: true
 
 # Podcast Appearances
+- title: "NVIDIA NemoClaw, OpenAI's pivot and Shopify agents"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2026-03-20
+  type: podcast
+  url: https://www.youtube.com/watch?v=Ce_p69dV1jw
+  description: Panel discussion about NVIDIA, NemoClaw, and how LLMs help robot brains
+
 - title: "AI Code Generation: Wins, Fails and the Future"
   event: "Mixture of Experts (IBM Technology)"
   date: 2025-12-26
