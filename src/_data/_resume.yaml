@@ -27,10 +27,20 @@ competencies:
   - AI Strategy
 
 experience:
+  - title: Senior Staff AI Engineer + Lead Developer Advocate for AI
+    company: IBM Software - Developer Relations for AI
+    start: 2025-07-15
+    end: present
+    highlights:
+      - Co-founded IBM's Developer Relations team focused on AI
+      - Designed and built an educational AI game - the "Deep Blue Heist" - to introduce people to agentic AI and using agentic coding tools
+      - Gave numerous talks and workshops on MCP, agentic AI and keeping the craft of software engineering alive in the era of AI
+      - Acted as local expert on optimal human and AI collaboration
+
   - title: Senior Staff Engineer - Trustworthy AI Tech Lead
     company: IBM Research - watsonx.ai Platform
     start: 2021-11
-    end: present
+    end: 2025-07-15
     highlights:
       - Unified IBM's fragmented Trustworthy AI research (fairness, explainability, robustness) into Watson Trust, a production-ready sklearn-compatible Python library. Previously these existed as separate codebases with incompatible data structures; the unified API made responsible AI practices accessible to product teams who had treated them as too obscure to implement.
       - Founded IBM's Inner Source Program Office in 2021 and led the effort to coalesce 20 years of NLP development into the Python and Java-based Watson NLP library, which became the de facto standard for NLP across IBM in the pre-generative AI era. Won Outstanding Technical Achievement Award and IBM Corporate Award.
