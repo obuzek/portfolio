@@ -66,6 +66,13 @@
   highlighted: true
 
 # Podcast Appearances
+- title: "Agent control planes & OpenAI model solves Erdos"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2026-05-29
+  type: podcast
+  url: https://youtu.be/wVdivlahcm0
+  description: Panel discussion about agent control planes, and whether LLMs can do math
+  
 - title: "NVIDIA NemoClaw, OpenAI's pivot and Shopify agents"
   event: "Mixture of Experts (IBM Technology)"
   date: 2026-03-20
