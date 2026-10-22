@@ -4,3 +4,21 @@ repos:
     description: The LM Desk project is a central entrypoint for configuring a set of awesome tools that will power your desktop productivity using generative AI. This is a project-of-projects that brings together the best open source tools to get you developing faster.
     language: Shell
     topics: []
+  - title: ai-agents-workshop
+    url: https://github.com/obuzek/ai-agents-workshop
+    description: Workshop (most recently given at ODSC AI East 2026) on building agents responsibly. Uses examples from regulated industries like healthcare.
+    language: Python
+    topics:
+      - agents
+      - ai
+      - responsible-ai
+  - title: bot-voice-skill
+    url: https://github.com/obuzek/bot-voice-skill
+    description: Want to strip out the personality of your chatbot? Miss the bots of old? Try this.
+    language: null
+    topics: []
+  - title: shared-context-talk
+    url: https://github.com/obuzek/shared-context-talk
+    description: Shared context talk. Keynote at JPMC PowerUp 2026.
+    language: CSS
+    topics: []
