@@ -5,6 +5,7 @@
   event: JPMorgan Chase PowerUp Conference 2026
   date: 2026-10-22
   type: conference
+  url: https://obuzek.github.io/shared-context-talk/
   slides: https://obuzek.github.io/shared-context-talk/
   description: Keynote on shared context for AI-native teams, and what it takes to run an agent factory.
   highlighted: true
