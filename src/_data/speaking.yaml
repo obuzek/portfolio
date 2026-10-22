@@ -75,6 +75,20 @@
   highlighted: true
 
 # Podcast Appearances
+- title: "OpenAI talks GPT-6 Astra and Millenium Prize, researchers create WeWorm exploit & IBM's US Open app"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2026-09-11
+  type: podcast
+  url: https://www.youtube.com/watch?v=XPReiOKCzFI
+  description: Panel discussion on GPT-6 Astra, AI and the Navier-Stokes proof, the WeWorm exploit, and IBM's US Open app.
+
+- title: "Anthropic's sandbox breach, EU's AI transparency push and DeepSeek's cost-cutting model"
+  event: "Mixture of Experts (IBM Technology)"
+  date: 2026-08-07
+  type: podcast
+  url: https://www.youtube.com/watch?v=W0wXevMkdMM
+  description: Panel discussion on the Anthropic and Meta sandbox breaches, the EU's AI transparency push, and DeepSeek's cost-cutting model.
+
 - title: "Agent control planes & OpenAI model solves Erdos"
   event: "Mixture of Experts (IBM Technology)"
   date: 2026-05-29
