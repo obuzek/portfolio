@@ -1,6 +1,14 @@
 # Speaking Engagements
 
 # Conference Talks
+- title: "The Elements of Context Engineering: The Foundations of AI-Native Teams"
+  event: JPMorgan Chase PowerUp Conference 2026
+  date: 2026-10-22
+  type: conference
+  slides: https://obuzek.github.io/shared-context-talk/
+  description: Keynote on shared context for AI-native teams, and what it takes to run an agent factory.
+  highlighted: true
+
 - title: "Taming MCP Server Sprawl: Securing and Scaling the Model Context Protocol in Production"
   event: Open Source Summit North America 2026
   date: 2026-05-18

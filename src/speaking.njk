@@ -13,8 +13,8 @@ title: Speaking
   <article class="item-card">
     <h3>
       {% if talk.type %}<span class="speaking-badge speaking-badge--{{ talk.type }}">{{ talk.type }}</span>{% endif %}
-      {% if talk.url %}
-      <a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
+      {% if talk.url or talk.slides %}
+      <a href="{{ talk.url or talk.slides }}" target="_blank" rel="noopener">{{ talk.title }}</a>
       {% else %}
       {{ talk.title }}
       {% endif %}
@@ -27,6 +27,9 @@ title: Speaking
     <p class="item-description">{{ talk.description }}</p>
     {% if talk.url %}
     <p><a href="{{ talk.url }}" target="_blank" rel="noopener">Watch recording &rarr;</a></p>
+    {% endif %}
+    {% if talk.slides %}
+    <p><a href="{{ talk.slides }}" target="_blank" rel="noopener">View slides &rarr;</a></p>
     {% endif %}
   </article>
   {% else %}
